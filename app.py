@@ -90,7 +90,7 @@ class HelloForm(Form):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     form = HelloForm(request.form)
-    return render_template('first_app.html', form=form)
+    return render_template('index.html', form=form)
 
 
 @app.route('/hello', methods=['POST', 'GET'])
