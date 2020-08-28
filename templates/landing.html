@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>InveStoreResearch</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/site.css">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #454545;">
+        <div class="container">
+            <a class="navbar-brand text-white">InveStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white lead">Расчет ликвидности объекта</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="display-5">Оценка стоимостных параметров объекта</h5>
+</div>
+    <div class="card-deck mb-4 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h6>Стоимость объекта</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title pricing-card-title">{{ prediction_s }}
+                    <small class="text-muted">руб</small>
+                </h4>
+                <h6 class="list-unstyled mt-3 mb-4">{{ m_kv }}
+                    <small class="text-muted">руб за м2</small>
+                </h6>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h6>Арендная ставка в мес</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title pricing-card-title">{{ prediction_r }}
+                    <small class="text-muted">руб</small>
+                </h4>
+                <h6 class="list-unstyled mt-3 mb-4">{{ m_kv_r }}
+                    <small class="text-muted">руб за м2</small>
+                </h6>
+            </div>
+        </div>
+         <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h6>Доходным методом</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title pricing-card-title">{{ summ }}
+                    <small class="text-muted">руб</small>
+                </h4>
+                <h6 class="list-unstyled mt-3 mb-4">{{ m_kv_3 }}
+                    <small class="text-muted">руб за м2</small>
+                </h6>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h6>Cредневзвешанная оценка</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title pricing-card-title">{{ balans }}
+                    <small class="text-muted">руб</small>
+                </h4>
+                 <h6 class="list-unstyled mt-3 mb-4">{{ m_kv_2 }}
+                    <small class="text-muted">руб за м2</small>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div id='button'>
+	  <form action="/">
+	        <input type=submit class="btn btn-warning rounded-pill" value='Новый расчет'>
+	  </form>
+    </div>
+    <footer class="border-top footer text-muted">
+
+        &copy; 2020 - InveStore Research - Оценка привлекательности активов
+    </footer>
+</div>
+
+</div>
+
+
+
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+
